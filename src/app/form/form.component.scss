@@ -1,0 +1,124 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 5px 2px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+
+  p, label, span {
+    font-size: 0.85rem;
+  }
+
+  &-price {
+    margin-left: 1rem;
+
+    &-number {
+      font-weight: 800 !important;
+      font-size: 1.4rem !important;
+    }
+  }
+
+  &-add {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+
+  &-number {
+    font-weight: 800;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .product {
+    gap: 1rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .product {
+    padding: 2rem;
+
+    p, label, span {
+      font-size: 1rem;
+    }
+
+    &-price {
+      &-number {
+        font-size: 1.75rem !important;
+      }
+    }
+  }
+
+  .total-price {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .product {
+    p, label, span {
+      font-size: 1.1rem;
+    }
+
+    &-price {
+      &-number {
+        font-size: 1.85rem !important;
+      }
+    }
+  }
+
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .product {
+    p, label, span {
+      font-size: 1.3rem;
+    }
+
+    &-price {
+      &-number {
+        font-size: 2rem !important;
+      }
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .product {
+    h4 {
+      font-size: 2rem;
+    }
+
+    p, label, span {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<form [formGroup]="formulario">
+
+
+  <div class="product">
+    <div class="product-text">
+      <h4>{{ products[0].title }}</h4>
+      <p>{{ products[0].description }}</p>
+    </div>
+    <div class="product-price">
+      <span class="product-price-number">{{ products[0].price }}</span>
+      <span class="product-price-euros">€</span>
+    </div>
+    <div class="product-add form-check">
+      <input class="form-check-input" type="checkbox" formControlName="checkbox1" id="checkbox1">
+      <label class="form-check-label" for="checkbox1">Afegir</label>
+    </div>
+  </div>
+
+
+  <div class="product">
+    <div class="product-text">
+      <h4>{{ products[1].title }}</h4>
+      <p>{{ products[1].description }}</p>
+    </div>
+    <div class="product-price">
+      <span class="product-price-number">{{ products[1].price }}</span>
+      <span class="product-price-euros">€</span>
+    </div>
+    <div class="product-add form-check">
+      <input class="form-check-input" type="checkbox" formControlName="checkbox2" id="checkbox2">
+      <label class="form-check-label" for="checkbox2">Afegir</label>
+    </div>
+  </div>
+
+
+  <div class="product">
+    <div class="product-text">
+      <h4>{{ products[2].title }}</h4>
+      <p>{{ products[2].description }}</p>
+    </div>
+    <div class="product-price">
+      <span class="product-price-number">{{ products[2].price }}</span>
+      <span class="product-price-euros">€</span>
+    </div>
+    <div class="product-add form-check">
+      <input class="form-check-input" type="checkbox" formControlName="checkbox3" id="checkbox3">
+      <label class="form-check-label" for="checkbox3">Afegir</label>
+    </div>
+  </div>
+
+  <div class="total-price">
+    <h3>Preu pressuposat:</h3>
+    <h3 class="total-price-number">{{ totalPrice }}€</h3>
+  </div>
+
+</form>
