@@ -9,18 +9,18 @@ export class ProductsService {
   public products: Product[] = [
     {
       title: 'Seo',
-      description: "Programació d'una web responsive completa",
+      description: "Millora la teva visibilitat online",
       price: 300
     },
     {
       title: 'Ads',
-      description: "Programació d'una web responsive completa",
+      description: "Impulsa el teu èxit amb publicitat",
       price: 400
     },
     {
       title: 'Web',
       description: "Programació d'una web responsive completa",
-      price: 500
+      price: 530
     }
   ]
 

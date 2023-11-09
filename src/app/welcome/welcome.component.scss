@@ -10,8 +10,15 @@
   }
 }
 
-app-form {
-  padding: 0.5rem;
+app-home {
+  padding: 0rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  app-home {
+    padding: 0.5rem;
+  }
 }
 
 
@@ -21,7 +28,7 @@ app-form {
     padding: 3rem;
   }
 
-  app-form {
+  app-home {
     padding: 0;
     margin: 0 auto;
     width: 90%;
@@ -30,7 +37,7 @@ app-form {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  app-form {
+  app-home {
     width: 80%;
   }
 }
@@ -44,7 +51,7 @@ app-form {
     padding: 4rem;
   }
 
-  app-form {
+  app-home {
     width: 75%;
   }
 }

@@ -1,0 +1,19 @@
+<form [formGroup]="webForm">
+  <div class="div-input form-check">
+    <label class="form-label" for="nPages">Nombre de pàgines</label>
+    <div class="div-input-controls">
+      <button (click)="addPages()">+</button>
+      <input [ngClass]="{'is-invalid': webForm.get('nPages')!.hasError('min') || webForm.get('nPages')!.hasError('required') || webForm.get('nPages')!.hasError('max')}" class="form-control" type="number" formControlName="nPages" id="nPages">
+      <button (click)="subPages()">-</button>
+    </div>
+  </div>
+
+  <div class="div-input form-check">
+    <label class="form-label" for="nLangs">Nombre de llenguatges</label>
+    <div class="div-input-controls">
+      <button (click)="addLangs()">+</button>
+      <input [ngClass]="{'is-invalid': webForm.get('nLangs')!.hasError('min') || webForm.get('nLangs')!.hasError('required') || webForm.get('nLangs')!.hasError('max')}" class="form-control" type="number" formControlName="nLangs" id="nLangs">
+      <button (click)="subLangs()">-</button>
+    </div>
+  </div>
+</form>

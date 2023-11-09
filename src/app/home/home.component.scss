@@ -7,14 +7,39 @@ form {
   width: 100%;
 }
 
+.product-with-panel {
+  width: 100%;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 5px 2px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+
+  .product {
+    box-shadow: none;
+    border-radius: unset;
+    padding: 0;
+  }
+}
+
+.checked {
+  box-shadow: 0 4px 5px 2px rgba(0,0,0,0.2), inset 0 0 5px 0 #0d6efd !important;
+}
+
 .product {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 2fr auto;
   align-items: center;
   padding: 2rem 1rem;
   box-shadow: 0 4px 5px 2px rgba(0,0,0,0.2);
   border-radius: 1rem;
+
+  &-text {
+    padding: 0.5rem;
+  }
+
+  &-text, &-price, &-add {
+    flex: 1;
+  }
 
   p, label, span {
     font-size: 0.85rem;
@@ -30,6 +55,7 @@ form {
   }
 
   &-add {
+    margin: 0;
     margin-left: 1rem;
     display: flex;
     justify-content: center;
@@ -41,7 +67,7 @@ form {
 .total-price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   padding: 1rem;
 
@@ -59,8 +85,12 @@ form {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .product {
+  .product-with-panel {
     padding: 2rem;
+  }
+
+  .product {
+    padding: 2rem 3rem;
 
     p, label, span {
       font-size: 1rem;
@@ -71,6 +101,14 @@ form {
         font-size: 1.75rem !important;
       }
     }
+
+    &-add {
+      margin: 0;
+    }
+  }
+
+  .product-with-panel {
+    padding: 2rem 3rem;
   }
 
   .total-price {
@@ -119,6 +157,12 @@ form {
 
     p, label, span {
       font-size: 1.5rem;
+    }
+
+    &-price {
+      &-number {
+        font-size: 2.8rem !important;
+      }
     }
   }
 }

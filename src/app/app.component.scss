@@ -3,6 +3,14 @@ app-welcome {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  padding: 1rem;
+  padding: 0.5rem;
   gap: 1rem;
+  min-width: 290px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  app-welcome {
+    padding: 1rem;
+  }
 }
