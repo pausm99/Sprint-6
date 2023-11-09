@@ -1,3 +1,5 @@
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+.modal-dialog {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}

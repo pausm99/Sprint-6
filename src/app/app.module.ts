@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PanelComponent } from './home/panel/panel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     WelcomeComponent,
     PanelComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

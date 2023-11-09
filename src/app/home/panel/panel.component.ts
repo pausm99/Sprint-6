@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { BudgetService } from 'src/app/services/budget.service';
+import { ModalComponent } from 'src/app/shared/modal/modal.component';
 
 @Component({
   selector: 'app-panel',
@@ -10,9 +12,10 @@ import { BudgetService } from 'src/app/services/budget.service';
 export class PanelComponent implements OnInit {
 
   webForm: FormGroup;
+  modalOpen: boolean = false;
   @Output() webPrice = new EventEmitter<number>();
 
-  constructor(public budgetService: BudgetService) {
+  constructor(public budgetService: BudgetService, private modalService: NgbModal) {
     this.webForm = new FormGroup({
       nPages: new FormControl(1, [Validators.required, Validators.min(1), Validators.max(50)]),
       nLangs: new FormControl(1, [Validators.required, Validators.min(1), Validators.max(20)]),
@@ -65,6 +68,11 @@ export class PanelComponent implements OnInit {
       const actualValue = nLangs.value || 1;
       if (actualValue !== 1) nLangs.setValue(actualValue - 1);
     }
+  }
+
+  openModal(type: string): void {
+    const modalRef = this.modalService.open(ModalComponent);
+    modalRef.componentInstance.type = type;
   }
 
 }

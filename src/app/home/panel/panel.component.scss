@@ -11,6 +11,19 @@ form {
     padding: 0;
     margin: 0;
 
+    &-info {
+      margin-bottom: 0.5rem;
+
+      .info-button {
+        font-size: 0.85rem;
+        margin-right: 0.25rem;
+      }
+
+      .form-label {
+        margin: 0;
+      }
+    }
+
     label, button, input {
       font-size: 0.85rem;
     }
@@ -56,6 +69,12 @@ form {
     flex-direction: row;
     justify-content: space-evenly;
 
+    .div-input {
+      .info-button {
+        margin-right: 0.5rem;
+        font-size: 1rem;
+      }
+    }
   }
 }
 
@@ -71,6 +90,10 @@ form {
       justify-content: flex-end;
       align-items: center;
       gap: 2rem;
+
+      &-info {
+        margin: 0;
+      }
 
       label, input {
         font-size: 1rem;
@@ -111,6 +134,12 @@ form {
     .div-input {
       label, input {
         font-size: 1.5rem;
+      }
+
+      &-info {
+        .info-button {
+          font-size: 1.3rem;
+        }
       }
     }
   }

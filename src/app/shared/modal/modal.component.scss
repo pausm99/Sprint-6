@@ -1,0 +1,62 @@
+#modal {
+  padding: 3rem 1.5rem;
+
+  &-title {
+    margin-bottom: 1rem;
+  }
+
+  &-description {
+    font-size: 0.9rem;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  #modal {
+    padding: 3rem 2rem;
+
+    &-description {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #modal {
+    &-description {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #modal {
+    &-description {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  #modal {
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-description {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  #modal {
+    &-description {
+      font-size: 1.5rem;
+    }
+  }
+}
