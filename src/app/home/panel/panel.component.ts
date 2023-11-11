@@ -12,7 +12,6 @@ import { ModalComponent } from 'src/app/shared/modal/modal.component';
 export class PanelComponent implements OnInit {
 
   webForm: FormGroup;
-  modalOpen: boolean = false;
   @Output() webPrice = new EventEmitter<number>();
 
   constructor(public budgetService: BudgetService, private modalService: NgbModal) {
