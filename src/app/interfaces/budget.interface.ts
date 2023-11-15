@@ -4,4 +4,5 @@ export interface Budget {
   phoneNumber: string;
   services: string[];
   price: number;
+  date: Date;
 }

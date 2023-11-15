@@ -91,7 +91,8 @@ export class HomeComponent implements OnInit {
       email: this.form2.get('email')!.value || '',
       phoneNumber: phone,
       services: servicesForm,
-      price: priceForm
+      price: priceForm,
+      date: new Date()
     }
 
     if (this.form2.valid) {

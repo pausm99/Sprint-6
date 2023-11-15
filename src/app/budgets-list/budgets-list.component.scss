@@ -3,7 +3,29 @@ hr {
 }
 
 h2 {
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.controls {
+
+  font-size: 0.85rem;
+
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    color: rgb(79, 79, 79);
+    transition: color 300ms ease, font-weight 300ms ease;
+  }
+
+  button:focus {
+    color: black;
+    font-weight: 500;
+  }
 }
 
 .budget {
@@ -65,6 +87,11 @@ h2 {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .controls {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
   .budget {
     padding: 2rem;
 
@@ -105,6 +132,12 @@ h2 {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  .controls {
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
   .budget {
     &-user {
       &-email, &-phone {
@@ -130,6 +163,11 @@ h2 {
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .controls {
+    font-size: 1.3rem;
+    margin-right: 2.5rem;
+  }
+
   .budget {
     &-user {
       &-email, &-phone {
@@ -155,6 +193,11 @@ h2 {
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
+  .controls {
+    font-size: 1.5rem;
+    margin-right: 3.5rem;
+  }
+
   .budget {
     &-user {
       &-email, &-phone {
