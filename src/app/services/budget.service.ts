@@ -1,9 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
+import { Budget } from '../interfaces/budget.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BudgetService {
+
+  public budgetArray = signal<Budget[]>([]);
 
   public helpTextsPages: string[] = [
     'Número de pàgines',

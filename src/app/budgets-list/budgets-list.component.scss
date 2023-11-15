@@ -1,0 +1,179 @@
+hr {
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.budget {
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 5px 2px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  &-user-email, &-user-phone {
+    color: gray;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  &-product {
+    font-size: 0.85rem;
+    p {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      list-style: none;
+
+      li {
+        width: fit-content;
+      }
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    &-text {
+      color: gray;
+      font-size: 0.85rem;
+    }
+
+    &-number {
+      font-weight: 800;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .budget {
+    padding: 2rem;
+
+    &-user {
+      text-align: left;
+
+      &-email, &-phone {
+        font-size: 1rem;
+      }
+    }
+
+    &-product {
+      font-size: 1rem;
+
+      ul {
+        list-style: disc;
+        align-items: flex-start;
+        padding-left: 0.75rem;
+        margin-bottom: 0;
+        margin-left: 0.25rem;
+      }
+    }
+
+    &-price {
+      flex-direction: column;
+      gap: 0;
+
+      &-text {
+        font-size: 1rem;
+      }
+
+      &-number {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .budget {
+    &-user {
+      &-email, &-phone {
+        font-size: 1.1rem;
+      }
+    }
+
+    &-product {
+      font-size: 1.1rem;
+    }
+
+    &-price {
+      &-text {
+        font-size: 1.1rem;
+      }
+
+      &-number {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .budget {
+    &-user {
+      &-email, &-phone {
+        font-size: 1.3rem;
+      }
+    }
+
+    &-product {
+      font-size: 1.3rem;
+    }
+
+    &-price {
+      &-text {
+        font-size: 1.3rem;
+      }
+
+      &-number {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .budget {
+    &-user {
+      &-email, &-phone {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-product {
+      font-size: 1.5rem;
+    }
+
+    &-price {
+      &-text {
+        font-size: 1.5rem;
+      }
+
+      &-number {
+        font-size: 3rem;
+      }
+    }
+  }
+}

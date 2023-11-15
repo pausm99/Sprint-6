@@ -1,7 +1,7 @@
-<form [formGroup]="formulario">
+<form [formGroup]="form1">
 
 
-  <div class="product" [ngClass]="{'checked': formulario.get('checkbox1')?.value}">
+  <div class="product" [ngClass]="{'checked': form1.get('checkbox1')?.value}">
     <div class="product-text">
       <h4>{{ products[0].title }}</h4>
       <p>{{ products[0].description }}</p>
@@ -17,7 +17,7 @@
   </div>
 
 
-  <div class="product" [ngClass]="{'checked': formulario.get('checkbox2')?.value}">
+  <div class="product" [ngClass]="{'checked': form1.get('checkbox2')?.value}">
     <div class="product-text">
       <h4>{{ products[1].title }}</h4>
       <p>{{ products[1].description }}</p>
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <div class="product-with-panel" [ngClass]="{'checked': formulario.get('checkbox3')?.value}">
+  <div class="product-with-panel" [ngClass]="{'checked': form1.get('checkbox3')?.value}">
     <div class="product">
       <div class="product-text">
         <h4>{{ products[2].title }}</h4>
@@ -47,12 +47,25 @@
         <label class="form-check-label" for="checkbox3">Afegir</label>
       </div>
     </div>
-    <app-panel *ngIf="formulario.get('checkbox3')?.value" (webPrice)="captureWebPrice($event)"></app-panel>
+    <app-panel *ngIf="form1.get('checkbox3')?.value" (webPrice)="captureWebPrice($event)"></app-panel>
   </div>
+</form>
 
-  <div class="total-price">
-    <h2>Preu pressupostat:</h2>
-    <h2 class="total-price-number">{{ totalPrice + webPrice }}€</h2>
+<div class="total-price">
+  <h2>Preu pressupostat:</h2>
+  <h2 class="total-price-number">{{ totalPrice }}€</h2>
+</div>
+
+<form *ngIf="form1.valid" [formGroup]="form2" id="form2">
+  <div class="budget">
+    <h2>Demanar pressupost</h2>
+    <div class="budget-form">
+      <div class="form-group" id="budget-input">
+        <input class="form-control" [ngClass]="{'is-invalid': validateName() || !form2.get('name')?.touched && formSent}" type="text" maxlength="30" formControlName="name" id="name" placeholder="Nom">
+        <input class="form-control" [ngClass]="{'is-invalid': validatePhoneNumber() || !form2.get('phoneNumber')?.touched && formSent}" type="text" minlength="9" maxlength="9" formControlName="phoneNumber" id="phoneNumber" placeholder="Telèfon">
+        <input class="form-control" [ngClass]="{'is-invalid': validateEmail() || !form2.get('email')?.touched && formSent}" type="email" formControlName="email" id="email" placeholder="Email">
+      </div>
+      <button id="apply-budget" type="submit" class="btn btn-primary" (click)="applyBudget()">Sol·licitar pressupost</button>
+    </div>
   </div>
-
 </form>

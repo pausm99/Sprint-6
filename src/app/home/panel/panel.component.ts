@@ -12,7 +12,7 @@ import { ModalComponent } from 'src/app/shared/modal/modal.component';
 export class PanelComponent implements OnInit {
 
   webForm: FormGroup;
-  @Output() webPrice = new EventEmitter<number>();
+  @Output() webPrice = new EventEmitter<number[]>();
 
   constructor(public budgetService: BudgetService, private modalService: NgbModal) {
     this.webForm = new FormGroup({
@@ -28,7 +28,7 @@ export class PanelComponent implements OnInit {
 
       if (this.webForm.valid) {
         const price = this.budgetService.calculateWebPrice(nPages, nLangs);
-        this.webPrice.emit(price);
+        this.webPrice.emit([price, nPages, nLangs]);
       }
     });
   }

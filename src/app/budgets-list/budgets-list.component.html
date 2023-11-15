@@ -1,0 +1,22 @@
+<hr>
+<h2>Pressupostos en curs:</h2>
+
+<div class="budget row align-items-start gap-3 gap-md-0" *ngFor="let budget of budgets()">
+  <div class="budget-user col-12 col-md-4 text-break">
+    <h3 class="budget-user-name">{{ budget.name }}</h3>
+    <p class="budget-user-email">{{ budget.email }}</p>
+    <p class="budget-user-phone">{{ budget.phoneNumber }}</p>
+  </div>
+  <div class="budget-product col-12 col-md-6 text-md-start">
+    <p>Serveis contractats</p>
+    <ul>
+      <li *ngFor="let service of budget.services">
+        {{ service }}
+      </li>
+    </ul>
+  </div>
+  <div class="budget-price col-12 col-md-2">
+    <span class="budget-price-text">Total:</span>
+    <span class="budget-price-number">{{ budget.price }}<small>€</small></span>
+  </div>
+</div>

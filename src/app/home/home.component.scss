@@ -5,6 +5,8 @@ form {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  border-radius: 1rem;
+  transition: all 200ms ease;
 }
 
 .product-with-panel {
@@ -70,9 +72,41 @@ form {
   align-items: flex-end;
   width: 100%;
   padding: 1rem;
+  padding-top: 4rem;
 
   &-number {
     font-weight: 800;
+  }
+}
+
+.budget {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 5px 2px rgba(0,0,0,0.2);
+
+  &-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #budget-input {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      width: 100%;
+
+      input {
+        font-size: 0.8rem;
+      }
+    }
+
+    #apply-budget {
+      font-size: 0.85rem;
+    }
   }
 }
 
@@ -80,6 +114,12 @@ form {
 @media (min-width: 576px) {
   .product {
     gap: 1rem;
+  }
+
+  .budget {
+    #budget-input {
+      width: 75%;
+    }
   }
 }
 
@@ -115,6 +155,18 @@ form {
     justify-content: flex-end;
     gap: 2rem;
   }
+
+  .budget {
+    #budget-input {
+      input {
+        font-size: 1rem;
+      }
+    }
+
+    #apply-budget {
+      font-size: 1rem;
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -131,6 +183,28 @@ form {
     }
   }
 
+
+  .budget {
+    width: 100%;
+
+    &-form {
+      gap: 1rem;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      #budget-input {
+        width: auto;
+        flex-direction: row;
+        flex: 3;
+        padding: 1rem 0;
+      }
+
+      #apply-budget {
+        flex: 1;
+      }
+    }
+  }
 }
 
 // X-Large devices (large desktops, 1200px and up)
@@ -143,6 +217,18 @@ form {
     &-price {
       &-number {
         font-size: 2rem !important;
+      }
+    }
+  }
+
+  .budget {
+    padding: 1.5rem;
+
+    &-form {
+      gap: 2rem;
+
+      #budget-input {
+        gap: 0.75rem;
       }
     }
   }
@@ -162,6 +248,20 @@ form {
     &-price {
       &-number {
         font-size: 2.8rem !important;
+      }
+    }
+  }
+
+  .budget {
+    &-form {
+      #budget-input {
+        input {
+          font-size: 1.3rem;
+        }
+      }
+
+      #apply-budget {
+        font-size: 1.3rem;
       }
     }
   }

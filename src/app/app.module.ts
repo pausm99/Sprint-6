@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PanelComponent } from './home/panel/panel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './shared/modal/modal.component';
+import { BudgetsListComponent } from './budgets-list/budgets-list.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { ModalComponent } from './shared/modal/modal.component';
     WelcomeComponent,
     PanelComponent,
     ModalComponent,
+    BudgetsListComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
